@@ -14,7 +14,7 @@
 // document.write("<p> Test </p>")
 // console.log("Hi")
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Console Methods
@@ -44,7 +44,7 @@
 // console.log("Hallo " + myName) old 
 // console.log(` Hallo ${myName}`) new
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Data Types Intro:
@@ -75,7 +75,7 @@
 // //null => object
 // console.log(typeof null)
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Variables Intro:
@@ -86,7 +86,7 @@
 
 // hallo.innerHTML = "Hallo"
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Var
@@ -108,7 +108,7 @@
         - Block or Function Scope 
 */
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     String Syntax + Character Escope Sequences 
@@ -127,7 +127,7 @@
 // // \n
 // console.log("Bassam \n\"Ali\"")
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Template Literals (Template Strings)
@@ -158,7 +158,7 @@
 
 // document.write(markUp)
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Arithmetic Operators
@@ -204,7 +204,7 @@
 
 // console.log(--num)// -1
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     + Unary Plus [Return Number if its Not Number]
@@ -245,7 +245,7 @@
 
 // console.log(Number("100")) // 100
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Type Coercion (Type Casting)
@@ -274,7 +274,7 @@
 // console.log(false - true)// -1
 
 
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Number
@@ -302,7 +302,7 @@
    // console.log(Number.MAX_VALUE)
    // console.log(Number.MAX_VALUE + 1)
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Number Methods
@@ -343,7 +343,7 @@
 // console.log(Number.isNaN(100)) // false
 // console.log(Number.isNaN("Bassam" / 20)) // true
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
 Math Object
@@ -378,7 +378,7 @@ Math Object
 // console.log(Math.trunc(99.8)) // 99
 // console.log(Math.trunc(99.2)) // 99
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     String Methods 1
@@ -495,7 +495,7 @@ Math Object
 // console.log(a.endsWith("m", 6));// true
 // console.log(a.endsWith("m", 7));// false
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
 Conditional (Ternary) Operator
@@ -529,7 +529,7 @@ Conditional (Ternary) Operator
     // : console.log("Unkown")
     
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Logical Or ||
@@ -560,7 +560,7 @@ Conditional (Ternary) Operator
 // // false
 // console.log(`The Price Is ${price ?? 200}`); // flase
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Switch Stetement
@@ -596,7 +596,7 @@ Conditional (Ternary) Operator
 //         console.log("Unknown Day")
 // }
 
-/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Arrays
@@ -720,12 +720,424 @@ Conditional (Ternary) Operator
         - reverse
 */
 
-let myArray = ["Bassam", "Ali", 10,  "Ahmad", 12, "Mohammad", "Arwa", -9, "Osama", "Ahmad", -3]
+// let myArray = ["Bassam", "Ali", 10,  "Ahmad", 12, "Mohammad", "Arwa", -9, "Osama", "Ahmad", -3]
 
-console.log(myArray);
-// A => Z
-// small to Big
-console.log(myArray.sort());// [-3, -9, 10, 12, 'Ahmad', 'Ahmad', 'Ali', 'Arwa', 'Bassam', 'Mohammad', 'Osama']
+// console.log(myArray);
+// // A => Z
+// // small to Big
+// console.log(myArray.sort());// [-3, -9, 10, 12, 'Ahmad', 'Ahmad', 'Ali', 'Arwa', 'Bassam', 'Mohammad', 'Osama']
 
-// other direction
-console.log(myArray.reverse()); // ['Osama', 'Mohammad', 'Bassam', 'Arwa', 'Ali', 'Ahmad', 'Ahmad', 12, 10, -9, -3]
+// // other direction
+// console.log(myArray.reverse()); // ['Osama', 'Mohammad', 'Bassam', 'Arwa', 'Ali', 'Ahmad', 'Ahmad', 12, 10, -9, -3]
+
+// ***************************************************
+
+/*
+    Arrays Methods [Slicing]
+    - slice(Start [opt], End [Opt] Not Including End)
+        - slice() => All Array
+        - If Start is Undefind => 0
+        - Negative Count From End
+        - If End Is Undefined || > Indexes => Slice To the End Array.length
+        - Return New Array
+    - splice(Start [Mand], DeleteCount [Opt][0 No Remove], The items to Add [Opt])
+        - If Negative => Start From The End
+*/
+
+// let myArray = ["Bassam", "Ali", 10,  "Ahmad", 12, "Mohammad", "Arwa", -9, "Osama", "Ahmad", -3]
+
+// console.log(myArray);//['Bassam', 'Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+// console.log(myArray.slice());//['Bassam', 'Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+// console.log(myArray.slice(1));//['Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+// console.log(myArray.slice(1, 3));//['Ali', 10]
+// console.log(myArray.slice(-3));//['Osama', 'Ahmad', -3]
+// console.log(myArray.slice(-3, -2));//['Osama'] 
+// console.log(myArray.slice(3, -2));// ['Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama']
+
+// console.log(myArray)//['Bassam', 'Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+
+// myArray.splice(0, 0, "Sameer", "Khaled")
+
+// console.log(myArray)//['Sameer', 'Khaled', 'Bassam', 'Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+
+// myArray.splice(0, 1, "Jan", "Timo")
+
+// console.log(myArray)//['Jan', 'Timo', 'Khaled', 'Bassam', 'Ali', 10, 'Ahmad', 12, 'Mohammad', 'Arwa', -9, 'Osama', 'Ahmad', -3]
+
+// ***************************************************
+
+/*
+    Arrays Methods [Joining]
+    - concat(array, array) => Return A New Array
+    - join(Separator)
+*/
+
+// let myArray = ["Bassam", "Ali", 10,  "Ahmad", 12, "Mohammad", "Arwa", -9, "Osama", "Ahmad", -3];
+// let myNewArray = ["Sameer", "Khaled"];
+// let myBestArray = ["Jan", "Timo"];
+
+// let allFrinds = myArray.concat(myNewArray,myBestArray, "Gamal","Nare", [1, 2]);
+
+// console.log(allFrinds);
+
+// console.log(allFrinds.join(""));
+// console.log(allFrinds.join(" "));
+// console.log(allFrinds.join(" | "));
+// console.log(allFrinds.join(" | ").toUpperCase());
+
+// ***************************************************
+
+/*
+    Arrays Challenges
+*/
+
+// let zero = 0;
+
+// let counter = 3;
+
+// let my = ["Ahmad", "Mazero", "Elham", "Osama", "Gamal", "Ameer"]
+
+// console.log(my.reverse().slice(2))
+// console.log(my.reverse().slice(1, -3).reverse())
+
+// console.log(my)
+
+// const Elzero = () => {
+//     let  news = [];
+//     let test = my.reverse().slice(3, -2)
+//     let test2 = my.reverse().slice(1, -4)
+//     console.log(test2)
+//     news.push(test[0][0])
+//     news.push(test[0][1]) 
+//     news.push(test2[0][2]) 
+//     news.push(test2[0][3]) 
+//     news.push(test2[0][4]) 
+//     news.push(test2[0][5]) 
+//     news.join("")
+//     return news.join("");
+// }
+
+// console.log(`"${Elzero()}"`)
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Loop
+    - For
+
+    for ( [1] [2] [3] ){
+        //Block off Code
+    }
+*/
+
+// for (let i = 0; i < 10 ; i++){
+//     console.log(i)
+// }
+
+// ***************************************************
+
+/*
+    Loop    
+    - Loop On Sequences
+*/
+
+// let myArray = [1, 2, "Ahmad", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+// for (let i = 0; i < myArray.length; i ++) {
+//     console.log(myArray[i])
+// }
+
+// let ArrayString = [];
+// for (let i = 0; i < myArray.length; i ++) {
+//     if (typeof myArray[i] === "string"){
+//         ArrayString.push(myArray[i])
+//     }
+// }
+// console.log(ArrayString)
+
+// ***************************************************
+
+/*
+    Loop    
+    - Nested Loops
+*/
+
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor"];
+
+// let colors = ["Red", "Green", "Black"];
+
+// let models = [2020, 2021];
+
+// for (let i = 0; i < products.length; i++) {
+//     console.log('#'.repeat(10));
+//     console.log(`# ${products[i]}`);
+//     console.log('#'.repeat(10));
+//     for(let j = 0; j < colors.length; j++){
+//         console.log(`* ${colors[j]}`)
+//     }
+//     for(let y = 0; y < models.length; y++){
+//         console.log(`- ${models[y]}`)
+
+//     }
+// } 
+
+// ***************************************************
+
+/*
+    Loop Control   
+    - Break
+    - Continue
+    - Label
+*/
+
+// let products = ["Keyboards", "Mouse",10, 20, "Pen", "Pad", 30, 40, "Monitor"];
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor"];
+
+// let colors = ["Red", "Green", "Black"];
+
+// for(let i = 0; i < products.length; i++){
+//     if (products[i] === "Pen"){
+//         break;
+//     }
+//     console.log(products[i]);// Keyboards Mouse
+// }
+
+// for(let i = 0; i < products.length; i++){
+//     if ( typeof products[i] === "number"){
+//         continue;
+//     }
+//     console.log(products[i]);// Keyboards Mouse Pen Pad Monitor
+// }
+
+// mainLoop:for(let i = 0; i < products.length; i++){
+//     console.log(products[i]);
+//     nestedLoop:for(let j = 0; j < colors.length; j++){
+//         console.log(`- ${colors[j]}`)
+//         if(colors[j] === "Green")
+//         break mainLoop ;
+//     }
+// }
+
+// ***************************************************
+
+/*
+    Loop For Advanced Example
+*/
+
+
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor", "IPhone"];
+
+
+// let i = 0;
+
+// for(; i < products.length; ){
+//     console.log(products[i])
+//     i++;
+//     if(i === products.length) break;
+// }
+// console.log(i)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Productes Practice
+*/
+
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor", "IPhone"];
+// let colors = ["Red", "Green", "Black"];
+
+// let showCount = 5;
+
+// document.write(`<h1>Show ${showCount} Products </h1>`);
+
+// for(let i = 0; i < showCount; i++) {
+//     document.write(`<div>`);
+//     document.write(`<h3>[${i + 1}]${products[i]}</h3>`)
+//     for ( let j = 0; j < colors.length; j++){
+//     }
+//     document.write(`<p>${colors.join(" | ")}</p>`);
+//     document.write(`</div>`);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Loop
+    - While
+*/
+
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor", "IPhone"];
+// let index = 0;
+
+// while (index < 10) {
+//     console.log(index)
+//     index++;
+//     if(index === 3){
+//         break;
+//     }
+// }
+// while (index < products.length) {
+//     console.log(products[index])
+//     index++;
+    
+// }
+
+// ***************************************************
+
+/*
+    Loop
+    - Do => While
+*/
+
+// let products = ["Keyboards", "Mouse", "Pen", "Pad", "Monitor", "IPhone"];
+// let i = 0;
+
+// while(false){
+//     console.log(products[i])
+//     i++
+// }
+
+// do{
+//     console.log(products[i])
+//     i++
+// } while(false)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Function
+    - What Is Function ?
+    - User-Defined VS Built In
+    - Syntax + Basic Usage
+    - Example From Real Life
+    - Practical Example
+*/
+
+// function sayHallo(userName) {
+//     console.log(`Hallo ${userName}`)
+// };
+
+// sayHallo("Bassam");
+
+// ***************************************************
+
+/*
+    Function Advanced Examples
+*/
+
+// function sayHallo(userName, age) {
+//     if(age < 30 ){
+//         console.log(`App is not suitable for you`)
+//     } else {
+//         console.log(`Hallo ${userName} your Name is ${age}`)
+
+//     }
+// }
+
+// sayHallo("Bassam", 30);
+// sayHallo("Ahmad", 40);
+// sayHallo("Osama", 18);
+
+// function generateYears(start, end, exclude){
+//     for(let i = start; i <= end; i++){
+//         if(i === exclude){
+//             continue;
+//         }
+//         console.log(i);
+//     }
+// }
+
+// generateYears(1982, 2021, 2020);
+
+// ***************************************************
+
+/*
+    Function
+    - Return
+    - Automatic Semicolon Insertion [No Line Terminator Allowed]
+    - Interrupting
+*/
+
+// function sayHallo(start, end) {
+//     for(let i = start ; i <= end; i ++){
+//         if(i === 15){
+//             return `Interrupting`
+//         }
+//         console.log(i)
+//     }
+// };
+
+// sayHallo(10, 20);
+
+// ***************************************************
+
+/*
+    Function
+    - Default Function Parameters
+    - Function Parameters Default [Undefined]
+    - Old Strategies [Condition + Logical Or]
+    - ES6 Method
+*/
+
+// function sayHallo(userName = "Unknown", age = "Unknown") {
+//     // if(ags === undefined){
+//     //     age = "Unknown"
+//     // }
+//     // age = age || "Unknown"
+//     return ` Hallo ${userName} your age is ${age}`
+// }
+
+// console.log(sayHallo())
+
+// ***************************************************
+
+/*
+    Function
+    - Rest Parameters
+    - Only One Allowed
+    - Must Be Last Element
+*/
+
+// function calc(...numbers) {
+//     // console.log(Array.isArray(numbers))
+//     let result = 0;
+//     for( let i = 0; i < numbers.length; i ++){
+//         result += numbers[i] // result = result + numbeers[i]
+//     }
+//     return `Final Result is ${result}`
+// }
+
+
+// console.log(calc(10, 20, 30, 40, 50));
+
+// ***************************************************
+
+/*
+    Function
+    - Parameters
+    - Default
+    - Rest 
+    - Loop
+    - Condition
+*/
+
+function showInfo (userName = "Unknown", age = "Unknown", rate = 0, show = "Yes", ...skills){
+    document.write(`<div>`);
+    document.write(`<h2 style="text-align: center;">Welcome, ${userName}</h2>`);
+    document.write(`<p style="text-align: center;">Age: ${age} </p>`);
+    document.write(`<p style="text-align: center;">Hour Rate: ${rate} € </p>`);
+    if (show === "Yes"){
+        if(skills.length > 0 ){
+            document.write(`<p style="text-align: center;"> ${skills.join(" | ")} </p>`);
+        } else {
+            document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> No Sikills </p>`);
+        }
+    } else {
+        document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> Skills is hidden </p>`);
+    }
+    document.write(`</div>`);
+
+}
+
+showInfo("Bassam", 30, 18, "no", "HTML", "CSS", "JavaScript");
