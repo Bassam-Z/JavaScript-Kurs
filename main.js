@@ -1122,22 +1122,234 @@ Conditional (Ternary) Operator
     - Condition
 */
 
-function showInfo (userName = "Unknown", age = "Unknown", rate = 0, show = "Yes", ...skills){
-    document.write(`<div>`);
-    document.write(`<h2 style="text-align: center;">Welcome, ${userName}</h2>`);
-    document.write(`<p style="text-align: center;">Age: ${age} </p>`);
-    document.write(`<p style="text-align: center;">Hour Rate: ${rate} € </p>`);
-    if (show === "Yes"){
-        if(skills.length > 0 ){
-            document.write(`<p style="text-align: center;"> ${skills.join(" | ")} </p>`);
-        } else {
-            document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> No Sikills </p>`);
-        }
-    } else {
-        document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> Skills is hidden </p>`);
-    }
-    document.write(`</div>`);
+// function showInfo (userName = "Unknown", age = "Unknown", rate = 0, show = "Yes", ...skills){
+//     document.write(`<div>`);
+//     document.write(`<h2 style="text-align: center;">Welcome, ${userName}</h2>`);
+//     document.write(`<p style="text-align: center;">Age: ${age} </p>`);
+//     document.write(`<p style="text-align: center;">Hour Rate: ${rate} € </p>`);
+//     if (show === "Yes"){
+//         if(skills.length > 0 ){
+//             document.write(`<p style="text-align: center;"> ${skills.join(" | ")} </p>`);
+//         } else {
+//             document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> No Sikills </p>`);
+//         }
+//     } else {
+//         document.write(`<p style="text-align: center; color: rgb(80, 104, 106);"> Skills is hidden </p>`);
+//     }
+//     document.write(`</div>`);
 
-}
+// }
 
-showInfo("Bassam", 30, 18, "no", "HTML", "CSS", "JavaScript");
+// showInfo("Bassam", 30, 18, "no", "HTML", "CSS", "JavaScript");
+
+// ***************************************************
+
+/*
+    Function
+    - Anonymous Function
+    - Calling Named Function VS Anonymous Function
+    - Task Without Name
+    - SetTimeout
+*/
+
+
+// function calc(num1 , num2 ){
+    //     return num1 + num2;
+    // }
+    
+// let calculator = function (num1 , num2 ){
+//     return num1 + num2;
+// }
+
+// console.log(calculator(10, 20));
+
+// ***************************************************
+
+/*
+    Function
+    - Function Inside Function
+    - Return Function
+*/
+
+// Example 1
+// function sayMessage (fName, lName) {
+
+//     let message = `Hallo`;
+//     //nested Function
+//     function concatMsg() {
+//         message = ` ${message} ${fName} ${lName}`
+//     }
+
+//     concatMsg()
+
+//     return message;
+// }
+
+// console.log(sayMessage("Bassam", "Ali"))
+
+// // Example 2
+// function sayMessage (fName, lName) {
+
+//     let message = `Hallo`;
+//     //nested Function
+//     function concatMsg() {
+//         return ` ${message} ${fName} ${lName}`
+//     }
+
+//     return concatMsg();
+// }
+
+// console.log(sayMessage("Bassam", "Ali"))
+
+// Example 3
+// function sayMessage (fName, lName) {
+
+//     let message = `Hallo`;
+//     //nested Function
+//     function concatMsg() {
+//         function getFullName(){
+//             return `${fName} ${lName}`
+//         }
+//         return ` ${message} ${getFullName()} `
+//     }
+
+//     return concatMsg();
+// }
+
+// console.log(sayMessage("Bassam", "Ali"))
+
+// ***************************************************
+
+/*
+    Function
+    - Arrow Function
+    - Regular VS Arrow [Param + No Param]
+    - Multiple Lines
+*/
+
+// let print = function () {
+//     return 10;
+// }
+
+// let print = () => {
+//     return 10;
+// }
+
+// let print = (num1, num2) => {
+//     return num1 + num2;
+// }
+// console.log(print(100, 50));
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Scope
+    - Global And Local Scope
+*/
+
+// var a = 1;
+// let b = 2;
+
+// function showText(){
+//     var a = 10;
+//     let b = 20;       
+//     console.log(`Function - From Local ${a}`)
+//     console.log(`Function - From Local ${b}`)
+// }
+// console.log(`From Global ${a}`)
+// console.log(`From Global ${b}`)
+
+// showText()
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Higher order Functions
+    -> is a function that accepts functions es parameters and/or returns a function.
+
+    Map 
+    - method create a new array
+    - populted with the results of calling a provided function on every element
+    - in the calling array
+
+    Syntax map(callBackFunction(Element, Index, Array) {}, thisArg)
+    - Element => The current element being processed in the array.
+    - Index => The index of the current element being processed in the array.
+    - Array => The Current Array
+
+    Notes
+    - Map Return A New Array
+
+    Examples
+    - Anonymous Function
+    - Namend Function
+*/
+
+// let myNums = [1, 2, 3, 4, 5, 6]
+
+// let myNewArray = [];
+
+// for (let i = 0; i < myNums.length; i++){
+//     myNewArray.push(myNums[i] + myNums[i] )
+// }
+
+// console.log(myNewArray);
+
+// let addSelf = myNums.map(function(element, index, arr){
+//     console.log(`Current Element => ${element}`);
+//     console.log(`Current Index => ${index}`);
+//     console.log(`Array => ${arr}`);
+//     console.log(`This => ${this}`);
+// }, 10)
+
+// ***************************************************
+
+/*
+    Map
+    - Swap Cases
+    - Inverted Numbers
+    - Ignore Bollean Value
+*/
+
+// let swappingCases = "bASSAm";
+// let invertedNumbers = [1, -10, -20, 15, 100, -30];
+// let ingoreNumbers = "1aLi213";
+
+// let sw = swappingCases.split("").map((ele) =>{
+//     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase() ;
+// }).join("")
+
+
+// console.log(sw)
+
+
+// let inv = invertedNumbers.map((ele) =>{
+//     return -ele
+// });
+
+// console.log(inv)
+
+// let img = ingoreNumbers.split("").map((ele) => {
+//     return isNaN(parseInt(ele)) ? ele : "";
+// }).join("");
+
+// console.log(img)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Filter
+    - method create a new Array
+    - with all elements that üass the test implemented by the provided function.
+
+    Syntax filter(callBackFunction(Element, Index, Array) {}, thisArg)
+    - Element => The current element being processed in the array.
+    - Index => The index of the current element being processed in the Array.
+    - Array => The currant Array
+*/
+
+// Get Frinds With Name Starts with A
+let Frind = ["Ahamd", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
+
+// Get Even Numbers Only
+let numbers = [11, 20, 2, 5, 17, 10]
