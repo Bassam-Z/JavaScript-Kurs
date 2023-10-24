@@ -1348,8 +1348,344 @@ Conditional (Ternary) Operator
     - Array => The currant Array
 */
 
-// Get Frinds With Name Starts with A
-let Frind = ["Ahamd", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
+// // Get Frinds With Name Starts with A
+// let Frind = ["Ahamd", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
-// Get Even Numbers Only
-let numbers = [11, 20, 2, 5, 17, 10]
+// // // Get Even Numbers Only
+// let numbers = [11, 20, 2, 5, 17, 10]
+
+// // //Test Map VS Filter
+
+// // let addMap = numbers.map((ele) =>  {
+// //     return ele + ele;
+// // });
+
+// // console.log(addMap);
+
+// // let addFilter = numbers.filter((ele) =>  {
+// //     return ele + ele;
+// // });
+
+// // console.log(addMap);
+
+// let filterFriends = Frind.filter((ele) => {
+//     return ele.startsWith("A")
+// })
+
+// console.log(filterFriends)
+
+// let evenNumbers = numbers.filter((ele) => {
+//     return ele % 2 === 0 ? true : false;
+// })
+
+// console.log(evenNumbers)
+
+
+// ***************************************************
+
+/*
+    Filter
+    - Filter Longest Word By Number
+*/
+
+// //Filter Words More Then 4 Characters
+// let sentence = "I Love Foo0d Code Too Playing Much";
+
+// let smallWords = sentence.split(" ").filter((ele) => {
+//     return ele.length <= 4;
+// }).join(" ")
+
+// console.log(smallWords);
+
+// // // Ignore Numbers
+// // let ignoreNumbers = "Bas213sa1m"
+
+// // let ing = ignoreNumbers.split("").filter((ele) => {
+// //     return isNaN(parseInt(ele));
+// // }).join("")
+
+// // console.log(ing);
+
+// // Ignore Numbers
+// let ignoreNumbers = "Bas213sa1m"
+
+// let ing = ignoreNumbers.split("").filter((ele) => {
+//     return !isNaN(parseInt(ele));
+// }).map((ele) => {
+//     return ele * ele;
+// }).join("")
+
+// console.log(ing);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Reduce
+    - method executes a reducer function on each element of the Arrray,
+        resulting in a single output value.
+    
+    Syntax
+    - reduce(callBackFunc(Accumulator, Current Val, Current Index, Source Array) {}, initialValue)
+    - Accumulator => the accummulated value previously returned in the last invocation
+    - Index => The index of the current element being processed in the Array.
+        - Starts from index 0 if an initialValue is provided.
+        - Otherwise, it starts from index 1.
+    - Array => The Current Array
+
+*/
+
+// let nums = [10, 20, 15, 30]
+
+// let add = nums.reduce((accumulator, currant, index, arr) => {
+//     console.log(`Accumulator => ${accumulator}`);
+//     console.log(`Currant Element => ${currant}`);
+//     console.log(`Currant Element index => ${index}`);
+//     console.log(`Array => ${arr}`);
+//     console.log(accumulator + currant);
+//     console.log(`##################`);
+//     return accumulator + currant;
+// }, 5);
+
+// console.log(add);
+
+// ***************************************************
+
+/*
+    Filter
+    - Longest Word
+    - Remove Chracters + Use Reduce
+*/
+
+// let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"];
+
+// let check = theBiggest.reduce((accumulator, currant) => {
+//     console.log(`Accumulator => ${accumulator}`);
+//     console.log(`Currant Element => ${currant}`);
+//     console.log(accumulator.length > currant.length ? accumulator : currant);
+//     console.log(`##################`);
+//     return accumulator.length > currant.length ? accumulator : currant ;
+// });
+// console.log(check);
+
+// let removeChars = ["B", "@", "@", "a", "s", "@", "@", "s", "a", "@", "m"];
+
+// let finalString = removeChars.filter((ele) => {
+//     return !ele.startsWith("@")
+// }).reduce((acc, cur) => {
+//     return `${acc}${cur}`
+// })
+
+// console.log(finalString)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    ForEach
+    - method executes a provided function once for each array element.
+
+    Syntax forEach (callBackFuncktion(Element, index, Array) {}, thisArg)
+    - Element => The currant element being processed in the array.
+    - index => The index of the current element being proccessed in the array.
+    - Array => The Current Array
+
+    Note 
+    - Doesnt Return Anything [Undefined]
+    - Break Will Not Break The Loop
+*/
+
+// let allLis = document.querySelectorAll("ul li");
+// let allDivs = document.querySelectorAll(".content div")
+
+// allLis.forEach( function (ele) {
+//     ele.onclick = function ()  {
+//         // Remove Active
+//         allLis.forEach( function (ele) {
+//             ele.remove("active")
+//         });
+//         this.classList.add("active");
+//         // Hide all Divs
+
+//         allDivs.forEach(function(ele) {
+//             ele.style.display = 'none';
+//         })
+//     };
+// });
+
+
+// console.log(allLis);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Object
+    - Intro and What is Object
+    - Testing Window Object
+    - Accessing Object
+    
+*/
+
+// let user = {
+//     // Properties
+//     theName: "Bassam",
+//     thwAge: 30,
+//     // Methods
+//     sayHallo: function () {
+//         return `Hallo`
+//     }
+// };
+
+// console.log(user.theName)
+// console.log(user.thwAge)
+// console.log(user.sayHallo())
+
+// ***************************************************
+
+/*
+    Object
+    - Dig Deeper
+    - Dot Notation vs Bracket Notation
+    - Dynamic Property Name
+*/
+
+// let myCuountry = "country";
+
+// let user = {
+//     theName: "Osama",
+//     "country of": "Deutschland",
+//     country: "Deutschland",
+// };
+
+// console.log(user.theName)
+// console.log(user["country of"])
+// console.log(user[myCuountry])
+
+// ***************************************************
+
+/*
+    Object
+    - Nested Object and Trainings
+*/
+
+// let user = {
+//     name: "Bassam",
+//     age: 30,
+//     skills: ["JavaScript", "HTML", "CSS"],
+//     available: false,
+//     addresses: {
+//         Syr: "Darra",
+//         Deutschland: {
+//             one: "Dortmund",
+//             tow: "Korne"
+//         },
+//     },
+//     chackAv: function () {
+//         if(this.available === true) {
+//             return `Free For Work`
+//         }else {
+//             return `Not Free`
+//         }
+//     },
+// };
+
+// console.log(user.name);// Bassam
+// console.log(user.age);// 30
+// console.log(user.skills.join(" | "));//JavaScript | HTML | CSS
+// console.log(user.skills[1]);// HTML
+// console.log(user.addresses.Syr);// Darra
+// console.log(user.addresses.Deutschland.tow);// Korne
+// console.log(user["addresses"].Deutschland.one);// Dortmund
+// console.log(user["addresses"]["Deutschland"]["tow"]);// Korne
+// console.log(user.chackAv());// Not Free
+
+
+// ***************************************************
+
+/*
+    Object
+    - Create eith New KeyWord new Object();
+*/
+
+// let user = new Object();
+
+// console.log(user);
+
+// user.age = 30;
+// user["country"] = "Deutschland";
+
+// user.sayHello = function () {
+//     return ` Hallo `
+// }
+
+// console.log(user);
+// console.log(user.age);
+// console.log(user.country);
+// console.log(user.sayHello());
+
+// ***************************************************
+
+/*
+    Object
+    - Create with New KeyWord new Object();
+*/
+
+
+// let user = {
+//     age: 20,
+//     doubleAge: function () {
+//         return this.age * 2;
+//     },
+// }
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleAge());
+
+// let obj = Object.create({});
+
+// obj.a = 100;
+
+// console.log(obj);
+
+// let copyObj = Object.create(user);
+
+// copyObj.age = 30;
+
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleAge());
+
+// ***************************************************
+
+/*
+    Object
+    - Create Object With assign Method
+*/
+
+// let obj1 = {
+//     prop1: 1,
+//     meth1: function () {
+//         return this.prop1;
+//     },
+// };
+
+// let obj2 = {
+//     prop2: 1,
+//     meth2: function () {
+//         return this.prop2;
+//     },
+// };
+
+// let targetObject = {
+//     prop1: 100,
+//     prop3: 3,
+// };
+
+// let finalObject = Object.assign(targetObject, obj1, obj2);
+
+// finalObject.prop1 = 200;
+// finalObject.prop4 = 400;
+
+// console.log(finalObject);
+
+// let newObject = Object.assign({}, obj1, {props5: 5, prop6: 6})
+
+// console.log(newObject);
