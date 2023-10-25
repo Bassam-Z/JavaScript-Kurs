@@ -1689,3 +1689,460 @@ Conditional (Ternary) Operator
 // let newObject = Object.assign({}, obj1, {props5: 5, prop6: 6})
 
 // console.log(newObject);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    DOM
+    - What is DOM
+    - Dom Selectors
+        - Find Element By ID
+        - Find Element By Tag Name
+        - Find Element By Class Name
+        - Find Element By CSS Selectors
+        - Find Element By Collection
+            - title
+            - body
+            - image
+            - forms
+            - links
+*/
+
+// let myIdElement = document.getElementById("my-div")
+// let myTagElement = document.getElementsByTagName("p")
+// let myClassElement = document.getElementsByClassName("my-Span")
+// let myQueryElement = document.querySelector(".special")
+// let myQueryAllElement = document.querySelectorAll(".my-Span")
+
+// console.log(myIdElement);
+// console.log(myTagElement[1]);
+// console.log(myClassElement[1]);
+// console.log(myQueryElement);
+// console.log(myQueryAllElement[1]);
+
+// console.log(document.title);
+// console.log(document.body);
+// console.log(document.forms[0].one.value);
+// console.log(document.links[1].href);
+
+// ***************************************************
+
+/*
+    DOM [Get / Set Elements Content And Attributes]
+    - innerHTML
+    - textContent
+    - Change Attributes Directly
+    - Change Attributes With Methods
+        -getAttribute
+        -setAttribute
+    Search
+    - innerText
+*/
+
+// let myElement = document.querySelector(".js")
+
+// console.log(myElement.innerHTML);
+// console.log(myElement.textContent);
+
+// myElement.innerHTML = "Text from <span> main.js</span>";
+// myElement.textContent = "Text from <span> main.js</span>";
+
+// document.images[0].src = "https://google.com";
+// document.images[0].alt = "Alternate";
+// document.images[0].title = "Picture";
+// document.images[0].id = "pic";
+// document.images[0].className = "pict";
+
+// let myLink = document.querySelector(".link");
+
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+
+// myLink.setAttribute("href", "https://de.de");
+// myLink.setAttribute("title", "X");
+
+// ***************************************************
+
+/*
+    DOM [Check Attributes]
+    - Element.attributes
+    - Element.hasattribute
+    - Element.hasattributes
+    - Element.removeAttribute
+*/
+
+// console.log(document.getElementsByTagName("p")[0].attributes);
+
+// let myP = document.getElementsByTagName("p")[0];
+
+// if(myP.hasAttribute("data-src")) {
+//     if(myP.getAttribute("data-src" === "")){
+//         myP.removeAttribute("data-src");
+//     }else {
+//         myP.setAttribute("data-src", "New Value")
+//     }
+// }else {
+//     console.log("Nor found");
+// }
+
+// if(myP.hasAttribute()){
+//     console.log(`Has Attributes`)
+// }
+
+// if(document.getElementsByTagName("div")[0].hasAttributes()){
+//     console.log(`Has Attributes`);
+// } else {
+//     console.log(`Div has no Attributes`);
+// }
+
+// ***************************************************
+
+/*
+    DOM [Create Elements]
+    - createElement
+    - createComent
+    - createTextNode
+    - createAttribute
+    - appendChild
+*/
+
+// let myElement = document.createElement("div");
+// let myAttr = document.createAttribute("data-custom");
+// let myText = document.createTextNode("Product One");
+// let myComment = document.createComment("This is Div");
+
+// myElement.className = "product";
+// myElement.setAttributeNode(myAttr);
+// myElement.setAttribute("data-test", "Testing");
+
+// //Append comment to Element
+// myElement.appendChild(myComment);
+
+// //Append Text to Element
+// myElement.appendChild(myText);
+
+// //append Element to Body
+// document.body.appendChild(myElement)
+
+// console.log(myElement);
+
+
+// ***************************************************
+
+/*
+    DOM [Create Elements]
+    - Practice Product With Heading And Paragraph
+*/
+
+
+// for(let i = 0; i < 100; i++){
+//     let myElementDiv = document.createElement("div");
+//     let myElementH2 = document.createElement("h2");
+//     let myElementP = document.createElement("p");
+    
+//     let myHeadingText = document.createTextNode("Product Title");
+//     let myParagraphText = document.createTextNode(`Product Description ${i + 1}`);
+// //Add Heading Text 
+// myElementH2.appendChild(myHeadingText);
+
+// //Add Heading to div Element
+// myElementDiv.appendChild(myElementH2);
+
+// // Add Paragraph Text
+// myElementP.appendChild(myParagraphText);
+
+// // Add paragrapg to Element Div
+// myElementDiv.appendChild(myElementP);
+
+// myElementDiv.className = "product";
+// document.body.appendChild(myElementDiv);
+// console.log(myElementDiv);
+// }
+
+// ***************************************************
+
+/*
+    DOM [Deal With Childrens]
+    - childeren
+    - childNodes
+    - firstChild
+    - lastChild
+    - firstElementChild
+    - lastElementChild
+*/
+
+// let myElement = document.querySelector("div");
+
+// console.log(myElement);
+// console.log(myElement.children);
+// console.log(myElement.children[0]);
+// console.log(myElement.childNodes);
+// console.log(myElement.childNodes[0]);
+
+
+// console.log(myElement.firstChild);
+// console.log(myElement.lastChild);
+
+// console.log(myElement.firstElementChild);
+// console.log(myElement.lastElementChild);
+
+// ***************************************************
+
+/*
+    DOM [Events]
+    - Use Enents on HTML
+    - Use Enents on JS
+        - onclick
+        - oncontextmenu
+        - onmouseenter
+        - onmouseleave
+
+        - onload
+        - onscroll
+        - onresize
+
+        - onfocus
+        - onblur
+        - onsubmit
+*/
+
+// let myBtn = document.getElementById("btn");
+
+// myBtn.onclick = () => {
+//     console.log("Clicked")
+// }
+// myBtn.oncontextmenu = () => {
+//     console.log("Clicked")
+// }
+
+// ***************************************************
+
+/*
+    DOM [Events]
+    - Validate From Practice
+    - Prevent Default
+*/
+
+// let userInput = document.querySelector("[name='username']");
+// let ageInput = document.querySelector("[name='age']");
+
+// console.log(userInput)
+
+// document.forms[0].onsubmit = (event) => {
+//     let userValid = false;
+//     let ageValid = false;
+
+//     // console.log(userInput.value);
+//     // console.log(userInput.value.length);
+
+//     if(userInput.value !== "" && userInput.value.length <= 10){
+//         userValid = true;
+//     }
+
+//     if(ageInput.value !== ""){
+//         ageValid = true;
+//     }
+
+//     if( userValid === false || ageValid === false){
+//         event.preventDefault();
+//     }
+// };
+
+// document.links[0].onmouseenter = (event) => {
+//     console.log(event);
+//     event.preventDefault();
+// };
+// document.links[0].onclick = (event) => {
+//     console.log(event);
+//     event.preventDefault();
+// };
+
+// ***************************************************
+
+/*
+    DOM [Events Simulation]
+    - click
+    - focus
+    - blur
+*/
+
+// let two = document.querySelector(".two");
+// let one = document.querySelector(".one");
+
+// window.onload =  () => {
+//     two.focus();
+// }
+
+// one.onblur =  () => {
+//     document.links[0].click();
+// }
+
+// ***************************************************
+
+/*
+    DOM [Class List]
+    - classList
+        - length
+        - contains
+        - item(index)
+        - add
+        - remove
+        - toggle
+*/
+
+// let element = document.getElementById("my-div");
+
+// console.log(element.classList);
+// console.log(typeof element.classList);
+// console.log(element.classList.contains("osama"));
+// console.log(element.classList.contains("show"));
+// console.log(element.classList.item("0"));
+
+// element.onclick = () => {
+//     element.classList.add("add-one", "add-two")
+// }
+
+// element.onclick = () => {
+//     element.classList.remove("one", "two")
+// }
+
+// element.onclick = () => {
+//     element.classList.toggle("Bassam")
+// }
+
+// ***************************************************
+
+/*
+    DOM [CSS]
+    - style
+    - cssText
+    - removePropoerty(propertyName) [inline, Stylesheet]
+    - setProperty(proportyName, value, priority)
+*/
+
+// let element = document.getElementById("my-div");
+
+// element.style.color = "red";
+// element.style.backgroundColor = "green";
+// element.style.fontWeight = "bold";
+
+// element.style.cssText = "font-weight: bold; color: green; opacity: 0.9";
+
+// element.style.removeProperty("color")
+// element.style.setProperty("color", "blue")
+// element.style.setProperty("font-size", "40px", "important");
+
+// document.styleSheets[0].rules[0].style.removeProperty("line-height")
+// document.styleSheets[0].rules[0].style.setProperty("background-color", "red")
+
+// ***************************************************
+
+/*
+    DOM [Deal with Elements]
+    - before [Element || String]
+    - after [Element || String]
+    - append [Element || String]
+    - prepend [Element || String]
+    - remove 
+*/
+
+// let element = document.getElementById("my-div");
+// let createdP = document.createElement("p");
+
+// // element.before("Hello From JS");
+// element.append(createdP);
+// element.prepend(createdP);
+
+// // element.remove();
+
+// ***************************************************
+
+/*
+    DOM [Traversing]
+    - nextSibling
+    - previousSibling
+    - nextElementSibling
+    - previousElementSibling
+    - parentElement
+*/
+
+// let span = document.querySelector(".two");
+
+// // console.log(span.nextSibling);
+// // console.log(span.nextElementSibling);
+// // // console.log(span.nextElementSibling.remove());
+// // console.log(span.nextElementSibling);
+// // console.log(span.previousElementSibling);
+// console.log(span.parentElement);
+
+// span.onclick = function () {
+//     span.parentElement.style.opacity = '0';
+// }
+
+// ***************************************************
+
+/*
+    DOM [Cloning]
+    - cloneNode(Deep)
+*/
+
+// let myp = document.querySelector("p").cloneNode(true);
+// let myDiv = document.querySelector("div");
+
+
+// myp.id = `${myp.id}-clone`;
+
+// myDiv.appendChild(myp)
+
+// ***************************************************
+
+/*
+    DOM [Add Event Listener]
+    - addEventListner
+    - Use without On
+    - Attach Multiple Events
+    - Error Test
+
+    Search
+    - Capture & Bubbling JavaScript
+    - removeEvantListener
+*/
+
+// let myP = document.querySelector("p");
+
+// myP.onclick = one;
+// myP.onclick = two;
+
+// function one () {
+//     console.log("Message From OnClick 1");
+// }
+// function two () {
+//     console.log("Message From OnClick 2");
+// }
+
+// myP.addEventListener("click", function() {
+//     console.log("Message From AddEvent");
+    
+// })
+
+// myP.addEventListener("click", one);
+// myP.addEventListener("click", two);
+
+// myP.onclick = function () {
+//     let newP = myP.cloneNode(true);
+//     newP.className = "clone";
+//     document.body.appendChild(newP);
+// };
+
+// // let cloned = document.querySelector(".clone"); //Error
+
+// // cloned.onclick = function () {
+// //     console.log("iam Cloned");
+// // }
+
+// document.addEventListener("click", (e) => {
+//     if(e.target.className === "clone") {
+//         console.log("Iam Cloned")
+//     }
+// })
+
