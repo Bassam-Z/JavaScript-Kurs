@@ -2146,3 +2146,266 @@ Conditional (Ternary) Operator
 //     }
 // })
 
+// ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - Interoduction
+        - Window object Is The Browser Window
+        - Window Contain The Document Object
+        - All Global Veriables And Objects And Function Are Nembers Of Window Object
+            - Test Document And Console
+    What can we Do With Window Object ?
+        - Open Window
+        - Close Window
+        - Move Window
+        - Resize Window
+        - Print Document
+        - Run code After Period Of Time Once or More
+        - Fully Control The URL
+        - Save Date Inside Browser To Ise Later
+*/
+
+// console.log("Good");
+// window.console.log("Good");
+// window.document.write("Good");
+// window.document.title = "Hallo Js";
+
+// ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - alert(Message) => Need No Response Only Ok Available
+    - confirm(Message) => Need Response And Return a Boolean
+    - prompt(Message, Defaulte Message) => Collect Data
+*/
+
+// window.alert("Test");
+// this.alert("Test");
+// alert("Test");
+// console.log("Test");
+
+// let confirmMasg = confirm("Are you Sure ?");
+
+// console.log(confirmMasg);
+
+// if(confirmMasg == true) {
+//     console.log("Item  Deleted");
+// }else {
+//     console.log("Item Not Deleted");
+// }
+// let promptMsg = prompt("Good Day to You!", "00.00.0000");
+
+// console.log(promptMsg);
+
+// ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - setTimeout(Function, Timeout, Additional Params)
+    - clearTimeout(Identifier)
+*/
+
+// setTimeout(() => {
+//     console.log("Hallo")
+    
+// }, 3000);
+
+// setTimeout(sayMsg, 3000);
+
+// function sayMsg () {
+//     console.log(`Iam Message`);
+// }
+
+// setTimeout(sayMsg, 3000, "Bassam", 30);
+
+// function sayMsg (user, age) {
+//     console.log(`Iam Message  for ${user} His Age Is: ${age}`);
+// }
+
+// let counter = setTimeout(sayMsg, 3000, "Bassam", 30);
+
+// function sayMsg (user, age) {
+//     console.log(`Iam Message  for ${user} His Age Is: ${age}`);
+// }
+
+// let btn = document.querySelector("button");
+
+// btn.onclick = () => {
+//     clearTimeout(counter);
+// }
+
+// ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - setInterval(Function, Millseconds, Additional Params)
+    - clearInterval(Identifier)
+*/
+
+// setInterval(() => {
+//     console.log("Hallo")
+    
+// }, 3000);
+
+// setInterval(sayMsg, 3000);
+
+// function sayMsg () {
+//     console.log(`Iam Message`);
+// }
+
+// setInterval(sayMsg, 3000, "Bassam", 30);
+
+// function sayMsg (user, age) {
+//     console.log(`Iam Message  for ${user} His Age Is: ${age}`);
+// }
+
+
+// function sayMsg (user, age) {
+    //     console.log(`Iam Message  for ${user} His Age Is: ${age}`);
+    // }
+    
+    
+    
+    // let div = document.querySelector("div"); 
+
+    // function countDown() {
+    //     div.innerHTML -= 1;
+    //     if(div.innerHTML === "0") {
+    //         clearInterval(counter)
+    //     }
+    // }
+
+    // let counter = setInterval(countDown, 1000);
+
+    // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - Location Object
+        - herf Get / Set [Url || File || Mail]
+        - host
+        - hash
+        - protocol
+        - reload()
+        - replace()
+        - assign()
+*/
+
+// console.log(location);
+// console.log(location.href);
+// location.href = "https://google.com";
+// location.href = "/#sec02";
+// location.href = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript#see_also";
+
+// console.log(location.host);
+// console.log(location.hostname);
+
+// console.log(location.protocol)
+
+// console.log(location.hash);
+
+// window.location.reload();
+
+// location.replace("https://google.com"); // no history
+// location.assign("https://google.com"); // with history
+
+    // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - Open(URL [Opt], window Name Or Target Attr [Opt], Win Features [Opt], History Replace)
+    - close()
+    -Window Features
+        - width [Num]
+        - height [Num]
+        - left [Num]
+        - top [Num]
+
+    Search
+        - Window.Open window Features
+*/
+
+// setTimeout(function () {
+//     //_self
+//     window.open("https://google.com","_blank", "width=400, height=400, left=500, top=400")
+// }, 2000)
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - History API
+        - Properties
+            - length
+        - Methods
+            - back()
+            - forward()
+            - go(Delta) => Position In History
+
+    Search [For Advanced Knowledge]
+        - pushState() + replaceState()
+*/
+
+// console.log(history);
+// console.log(history.length);
+
+// history.back();
+// history.go(0);
+// history.go(-2);
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - stop()
+    - print()
+    - focus()
+    - scrollTo(x, y || Options)
+    - scroll(x, y || Options)
+    - scrollBy(x, y || Options)
+*/
+
+// window.print()
+
+// let myNewWindo = window.open("https://google.com","_blank","width=400, height=400")
+// myNewWindo.focus();
+
+// window.scrollTo(500, 200);
+// window.scrollBy(500, 200);
+
+// window.scrollTo({
+//     left: 500,
+//     top: 200,
+//     behavior: "smooth"
+// })
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    - Practice => Scroll To Top
+    - scrollX [Alias => PageXOffset]
+    - scrollY [Alias => PageXOffset]
+*/
+
+// console.log(window.scrollX === window.pageXOffset);
+
+// let myBtn = document.querySelector("button");
+
+// window.onscroll = function () {
+//     if (window.scrollY >= 600) {
+//         console.log(`Scrolling Y Value Is ${window.scrollY}`);
+//         myBtn.style.display = "block";
+//     }else {
+//         myBtn.style.display = "none"
+//     }
+// }
+
+// myBtn.onclick =  () => {
+//     window.scrollTo({
+//         left: 0,
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// }
