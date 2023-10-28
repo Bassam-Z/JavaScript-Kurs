@@ -2409,3 +2409,102 @@ Conditional (Ternary) Operator
 //         behavior: "smooth"
 //     });
 // }
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    
+    Local Storage 
+    - setItem
+    - getItem
+    - removeItem
+    - clare
+    - key
+
+    Info
+    - No Expiration Time 
+    - HTTP and HTTPS
+    - Private Tab 
+*/
+
+// //set
+// window.localStorage.setItem("color", "red");
+// window.localStorage.fontWeight = "bold";
+// window.localStorage['fontSize'] = "20px";
+
+// // get
+// console.log(window.localStorage.getItem("color"));
+// console.log(window.localStorage.color)
+// console.log(window.localStorage["color"])
+
+// //remove One
+// window.localStorage.removeItem("color");
+
+// // Remove All
+// // window.localStorage.clear()
+
+// //get Key
+// console.log(window.localStorage.key(0));
+
+// //set color in Page
+// document.body.style.backgroundColor = window.localStorage.getItem("color");
+
+
+// console.log(window.localStorage);
+// console.log(typeof window.localStorage);
+
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    
+    Local Storage Praxis
+    
+*/
+
+// let lis = document.querySelectorAll("ul li");
+// let exp = document.querySelector(".experiment");
+
+// // window.localStorage.clear();
+
+// if (window.localStorage.getItem("color")) {// If There is Color in Local Storage
+//     // [1] Add Color to div
+//     exp.style.background = window.localStorage.getItem("color");
+//     // [2] remove default Active Class for a li [red]
+//     lis.forEach ((li) => {
+//         li.classList.remove("active");
+//     })
+//     // Add Active Class to  Current color
+//     document.querySelector(`[data-color= "${window.localStorage.getItem("color")}"]`).classList.add("active");
+
+// }
+
+// lis.forEach((li) => {
+//     li.addEventListener("click", (e) => {
+//         // console.log(e.currentTarget.dataset.color);
+//         // remove Active Class fro a li
+//         lis.forEach ((li) => {
+//             li.classList.remove("active");
+//         })
+//         // Add Active Calss to current Element
+//         e.currentTarget.classList.add("active");
+
+//         // Add Currant Color to Local Storage
+//         window.localStorage.setItem("color", e.currentTarget.dataset.color);
+
+//         //Change Div Background Color
+//         exp.style.background = e.currentTarget.dataset.color
+
+//     } )
+// })
+
+   // ***************************************************
+
+/*
+    BOM [Browser Object Model]
+    
+
+    
+*/
