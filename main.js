@@ -2504,7 +2504,44 @@ Conditional (Ternary) Operator
 
 /*
     BOM [Browser Object Model]
-    
+    Session Storge
+        - setItem    
+        - getItem    
+        - removeItem
+        - clear
+        - key
 
+    Info
+        - New Tab = Copy Session
+        - Duplicate Tab = Copy Session
+        - New Tab With Same Url = New Session
     
 */
+
+// // window.localStorage.setItem("color", "red");
+// // window.sessionStorage.setItem("color", "blue");
+
+// document.querySelector(".name").onblur = function () {
+//     // console.log(this.value);
+//     window.localStorage.setItem("input-Name", this.value);
+//     window.sessionStorage.setItem("input-Name", this.value);
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Destructuring
+    " Is a JavaScript expression that allows us to extract data from arrays,
+        objects, and maps and set them into new, distinct variables.
+        - Destructuring Array
+    "
+*/
+
+let myFrinds = ["Jan", "Timo", "Mousa", "Ali"];
+
+let [a, b, c, d] = myFrinds;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
