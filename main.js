@@ -2537,11 +2537,195 @@ Conditional (Ternary) Operator
     "
 */
 
-let myFrinds = ["Jan", "Timo", "Mousa", "Ali"];
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
 
-let [a, b, c, d] = myFrinds;
+// let myFrinds = ["Jan", "Timo", "Mousa", "Ali"];
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+// // [a, b, c, d] = myFrinds;
+// [a = "A", b, c, d, e = "Bassam"] = myFrinds;
+// // [a, b, c] = myFrinds;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
+
+
+// let [x, y, ,z] = myFrinds;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Array Advanced Examples
+*/
+
+// let myFriends = ["Mousa", "Timo", "Ali", ["Jan", "Amr", ["Mohamad", "Gamal"]]];
+
+// // console.log(myFriends[3][2][1]);
+
+// let [, , ,[a, ,[,b]]] = myFriends;
+
+// console.log(a);//Jan
+// console.log(b);//Gamal
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Array => Swapping Variables
+*/
+
+// let book = "Video";
+// let video = "Book";
+
+// // // Save Book Value in Stash
+// // let stash = book; //Video
+
+// // // Change Book Value
+// // book = video; //Book
+
+// // //Change Video Value
+// // video = stash; //Video
+
+// [book, video] = [video, book];
+
+// console.log(book);
+// console.log(video);
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Object
+*/
+
+// const user = {
+//     theName: "Bassam",
+//     theAge: 30,
+//     theTitle: "Developer",
+//     theCountry: "Deutschland"
+// };
+
+// // console.log(user.theName);
+// // console.log(user.theAge);
+// // console.log(user.theTitle);
+// // console.log(user.theCountry);
+
+// // let theName =  user.theName;
+// // let theAge =  user.theAge;l
+// // let theTitle =  user.theTitle;
+// // let theCountry =  user.theCountry;
+
+// // console.log(theName);
+// // console.log(theAge);
+// // console.log(theTitle);
+// // console.log(theCountry);
+
+// // ({ theName, theAge, theTitle, theCountry } = user);
+// // const { theName, theAge, theTitle, theCountry } = user;
+// const { theName, theAge, theTitle, theCountry } = user;
+
+// console.log(theName);
+// console.log(theAge);
+// console.log(theTitle);
+// console.log(theCountry);
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Object
+        - Naming The Variables
+        - Add New Property
+        - Nested Object
+        - Destructuring The Nested Object Only
+*/
+
+// const user = {
+//     theName: "Bassam",
+//     theAge: 30,
+//     theTitle: "Developer",
+//     theCountry: "Deutschland",
+//     theColor: "Black",
+//     skills: {
+//         html:70,
+//         css:80,
+//     },
+// };
+
+// // const { theName, theAge, theTitle, theCountry } = user;
+// const { theName: n, theAge: a, theCountry, theColor: co = "Red", skills: { html: h, css } } = user;
+
+// console.log(n);
+// console.log(a);
+// console.log(theCountry);
+// console.log(co);
+// console.log(`My HTML Skill Progress Is ${h}` );
+// console.log(`My CSS Skill Progress Is ${css}` );
+
+// const {html: skillOne, css: skillTwo} = user.skills;
+
+// console.log(`My HTML Skill Progress Is ${skillOne}` );
+// console.log(`My CSS Skill Progress Is ${skillTwo}` );
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Function Parameters
+*/
+
+// const user = {
+//     theName: "Bassam",
+//     theAge:30,
+//     skills: {
+//         html: 70,
+//         css: 80
+//     },
+// };
+
+// showDetails(user);
+
+// // function showDetails(obj) {
+// //     console.log(`Your Name Is ${obj.theName}`);
+// //     console.log(`Your Age Is ${obj.theAge}`);
+// //     console.log(`Your CSS Skill Progress Iss ${obj.skills.css}`);
+// // }
+
+// function showDetails({theName: n, theAge: a, skills: {css: c}} = user) {
+//     console.log(`Your Name Is ${n}`);
+//     console.log(`Your Age Is ${a}`);
+//     console.log(`Your CSS Skill Progress Iss ${c}`);
+// }
+
+// ***************************************************
+
+/*
+    Destructuring
+    - Destructuring Mixed Content
+*/
+
+// const user = {
+//     theName: "Bassam",
+//     theAge: 30,
+//     skills: ["HTML", "CSS", "JavaScript"],
+//     addresses: {
+//         Deutschalnd: "Dortmund",
+//         Syria: "Darra"
+//     },
+// }
+
+// const {theName: n, theAge: a, skills: [one, two, three], addresses: {Deutschalnd: d}} = user;
+
+// console.log(`Your Name is : ${n}`);
+// console.log(`Your Age is : ${a}`);
+// console.log(`Your Skills is : ${one}, ${two}, ${three}`);
+// console.log(`Your Adress is : ${d}`);
