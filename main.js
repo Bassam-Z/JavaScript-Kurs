@@ -2729,3 +2729,51 @@ Conditional (Ternary) Operator
 // console.log(`Your Age is : ${a}`);
 // console.log(`Your Skills is : ${one}, ${two}, ${three}`);
 // console.log(`Your Adress is : ${d}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Set Data Type
+        Syntax: new Set(Iterable)
+            - Object to Store Unique Values
+            - Cannot Access Elements By Index
+
+        Properties:
+        - Size
+
+        Methods:
+        - add
+        - delete
+        - clear
+        - has
+*/
+
+// let myData = [1, 1, 1, 2, 3, "A"];
+// // let myUniqueDate = new Set([1, 1, 1, 2, 3]);
+// // let myUniqueDate = new Set(myData);
+// // let myUniqueDate = new Set().add(1).add(1).add(1).add(2).add(3);
+// let myUniqueDate = new Set();
+
+// myUniqueDate.add(1).add(1).add(1);
+// myUniqueDate.add(2).add(3).add("A");
+
+// console.log(myData);
+// console.log(myUniqueDate);
+
+// console.log(myUniqueDate.size);
+
+// console.log(myData[0]);
+// console.log(myUniqueDate[0]);// undefined
+
+// // myUniqueDate.delete(2)
+// console.log(myUniqueDate.delete(2))
+// console.log(myUniqueDate);
+// console.log(myUniqueDate.size);
+
+// console.log(myUniqueDate.has("A"));//true
+// console.log(myUniqueDate.has("a".toUpperCase()));//true
+
+// // myUniqueDate.clear();
+
+// console.log(myUniqueDate);
+// console.log(myUniqueDate.size);
