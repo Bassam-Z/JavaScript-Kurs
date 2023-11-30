@@ -2777,3 +2777,76 @@ Conditional (Ternary) Operator
 
 // console.log(myUniqueDate);
 // console.log(myUniqueDate.size);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Set Vs WeakSet
+        "
+            The WeakSet is weak,
+            meaning references to objects in a Weakset are held Weakly.
+            if on other references to an object stored in th Weakset exist,
+            those objects can be garbage collected.
+        "
+
+        Set     => Can Store any Data Values
+        WeckSet => Collection of Objects Only
+        --
+        Set     => Have Size Property
+        WeckSet => Dose Not Have Size Property
+        --
+        Set     => Have Keys, values, Entries
+        WeakSet => Dose Not Have clear, Keys, Values and Enteries
+        --
+        Set     => Can use ForEach
+        EeakSet => Connot Use forEach
+*/ 
+
+// Set Experians
+// Type of Data
+
+let mySet = new Set([1,1,1,2,3,"A", "A"]);
+console.log(mySet);
+
+// Size
+console.log(`Size of Elements Inside Set Is: ${mySet.size}`);
+
+// Values + Keys Alias
+let iterator = mySet.keys();
+
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next());
+
+// ForEach
+
+mySet.forEach((el) => console.log(el));
+
+
+console.log('#'.repeat(20));
+
+//WeakSet Experians
+// Type of Data
+
+let myWs = new WeakSet([{a: 1, b: 2}]);
+console.log(myWs);
+
+// Size
+// console.log(`Size of Elements Inside Set Is: ${myWs.size}`); not exist
+
+// // Values + Keys Alias not possible
+// let iteratorWs = myWs.keys();
+
+// console.log(iteratorWs.next().value);
+// console.log(iteratorWs.next().value);
+// console.log(iteratorWs.next().value);
+// console.log(iteratorWs.next().value);
+// console.log(iteratorWs.next());
+
+// ForEach
+
+// myWs.forEach((el) => console.log(el)); not possible
+
+// WeakSet Use Cases
