@@ -2805,33 +2805,33 @@ Conditional (Ternary) Operator
 // Set Experians
 // Type of Data
 
-let mySet = new Set([1,1,1,2,3,"A", "A"]);
-console.log(mySet);
+// let mySet = new Set([1,1,1,2,3,"A", "A"]);
+// console.log(mySet);
 
-// Size
-console.log(`Size of Elements Inside Set Is: ${mySet.size}`);
+// // Size
+// console.log(`Size of Elements Inside Set Is: ${mySet.size}`);
 
-// Values + Keys Alias
-let iterator = mySet.keys();
+// // Values + Keys Alias
+// let iterator = mySet.keys();
 
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next());
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next());
 
-// ForEach
+// // ForEach
 
-mySet.forEach((el) => console.log(el));
+// mySet.forEach((el) => console.log(el));
 
 
-console.log('#'.repeat(20));
+// console.log('#'.repeat(20));
 
-//WeakSet Experians
-// Type of Data
+// //WeakSet Experians
+// // Type of Data
 
-let myWs = new WeakSet([{a: 1, b: 2}]);
-console.log(myWs);
+// let myWs = new WeakSet([{a: 1, b: 2}]);
+// console.log(myWs);
 
 // Size
 // console.log(`Size of Elements Inside Set Is: ${myWs.size}`); not exist
@@ -2850,3 +2850,61 @@ console.log(myWs);
 // myWs.forEach((el) => console.log(el)); not possible
 
 // WeakSet Use Cases
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+Map Data Type
+- Syntax: new Map (Iterable with Key/Value)
+    Map Vs Object
+
+    Map => Dose not contact Key By Default
+    Object => Has Default Keys
+
+    Map => Key can be Anything [Function, object, Any Primitive Data Types]
+    Object => String or Symbol
+
+    Map => odered by Insertion
+    Object => Not 100% Till Now
+
+    Map => Get Items by Size
+    Object => Need To Do Manually
+
+    Map => Can be Directly Iterated
+    Object => Not Directly and need to Usse Object.keya() and So on
+
+    Map => Better Proformance When Add or Remove Data
+    Object => Low Proformance When Comparing to Map
+
+    Map =>
+    Object =>
+*/  
+
+// let myMap = new Map();
+// let myEmptyObject = Object.create(null);
+// let myObject = {} ;
+
+// console.log(myMap);
+// console.log(myEmptyObject);
+// console.log(myObject);
+
+// let myNewMap = new Map();
+// myNewMap.set(10,"Number");
+// myNewMap.set("10","String");
+// myNewMap.set(true,"Boolean");
+// myNewMap.set({a:1, b:2},"Object");
+// myNewMap.set(function doSomething() {},"Function");
+
+// let myNewObject = {
+//     10:"Number",
+//     "10":"String"
+// }
+
+// console.log(myNewObject[10]);
+
+// console.log(myNewMap.get(10));
+// console.log(myNewMap.get("10"));
+
+// console.log("######");
+
+// console.log(myNewMap);
+// console.log(myNewObject);
