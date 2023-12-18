@@ -2953,3 +2953,163 @@ Map Data Type
 // myMap.clear();
 // console.log(myMap.size);
 
+// ***************************************************
+
+/*
+    -   Map vs WeakMap
+    "
+    WeackMap Allows Garbage Collector to Do its Task But Not Map.
+    "
+    
+    -- Map      => Kay can be Anything
+    -- WackMap  => Kay can be Object only
+    */
+   
+   // let mapUser = {theName: "Basam"};
+   // let myMap = new Map();
+
+// myMap.set(mapUser, "Object Value");
+
+// mapUser = null; // override the Reference
+
+// console.log(myMap);
+
+// // ------------------------
+
+// console.log('#'.repeat(20));
+
+// let wMapUser = {theName: "Ali"};
+// let myWeakMap = new WeakMap();
+
+// myWeakMap.set(wMapUser, "Object Value");
+
+// wMapUser = null; // override the Reference
+
+// console.log(myWeakMap);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+    Array Methods
+    - Array.form(Iterable, MapFunc, This)
+    - Variable
+        - String Numbers
+        - Set
+        - Using The Map Function
+        - Arrow Function
+        - Shorten the Method + Use Arguments
+        */
+       
+       // console.log(Array.from("Bassam"));
+       // console.log(Array.from("123456789", function (n) {
+//     return +n + +n;
+// }));
+// console.log(Array.from("123456789", (n) => +n + +n));
+
+// let myArray = [1, 1, 1, 2, 3, 4];
+
+// // let mySet = new Set(myArray);
+
+// // console.log(mySet);
+
+// // console.log(Array.from(mySet));
+
+// console.log([new Set (myArray)]);
+
+// //spread operator
+// console.log([...new Set (myArray)]);
+
+
+// function af() {
+    //     return Array.from(arguments);
+// }
+    
+// console.log(af("Osama", "Ahmad", "Sayed"))
+    
+    
+// ***************************************************
+
+/*
+    Array Methods
+        - Array.copyWithin(Target, Start => Optional, End => Optional)
+        "Copy Pary Of an Array To Another Location in The Same Array"
+            - Any Negativ Value will cunt from the End
+            - Target
+                - Index To copy Part to
+                - if At or Greater Than Array Length Nothing Will be Copied
+            - Start
+                - Index to Strat copying from
+                - if Ommited = Start from Index 0
+            - End
+                - Index to end Copying from
+                - Not Including end
+                - if Ommited = Reach the End
+*/
+
+
+// let mayArra = [10, 20, 30, 40, 50, "A", "B"];
+
+// // mayArra.copyWithin(3);// [10, 20, 30, 10, 20, 30, 40, 50]
+// // mayArra.copyWithin(4, 6);// [10, 20, 30, 40, 'B', 'C', 'B', 'C']
+// // mayArra.copyWithin(4, -1);// [10, 20, 30, 40, 'C', 'C', 'B', 'C']
+// // mayArra.copyWithin(1, -2);// [10, 'A', 'B', 40, 50, 'A', 'B']
+// mayArra.copyWithin(1, -2, -1);//  [10, 'A', 30, 40, 50, 'A', 'B']
+
+// console.log(mayArra);
+
+// ***************************************************
+
+/*
+    Array Methods
+        - Array.some(collbackDunc(element,index,Array), this Argument)
+            CallbackFunc = Function to ran on Every Element on the Given Array
+                - Element => The Current Element to Process
+                - Index => Index of Current Element
+                - Array => The Current Array Working with
+            This Argument => Value to use as this When Executing CallbackFunc
+
+        Using
+            - Check if Element Exists in Array
+            - Check if Number in Range
+*/
+
+// let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let myNumber = 7;
+
+// let check = nums.some(function(e) {
+//     console.log("Test")
+//     return e > 5;
+// });
+
+// let check = nums.some((e) => e > 5)// Arrow Function
+
+// let check = nums.some(function(e) {
+//         // console.log(this)
+//         return e > this;
+//     },myNumber);
+
+// console.log(check);
+
+
+
+// function CheckValues(arr, val) {
+//     return arr.some(function (e) {
+//         return e === val;
+//     });
+// }
+
+// console.log(CheckValues(nums, 20));
+// console.log(CheckValues(nums, 7));
+
+
+// let range = {
+//     min: 10,
+//     max: 20,
+// }
+
+// let checkNumberInRange = nums.some(function (e) {
+//     return e >= this.min && e <= this.max
+// }, range);
+
+// console.log(checkNumberInRange);
